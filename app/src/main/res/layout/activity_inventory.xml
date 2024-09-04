@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InventoryActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbFooter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbContainer"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvFooterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Copyright º 2024 LordMathi2741. All Rights Reserved"
+        android:textColor="#F6F2F2"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tbFooter"
+        app:layout_constraintEnd_toEndOf="@+id/tbFooter"
+        app:layout_constraintStart_toStartOf="@+id/tbFooter"
+        app:layout_constraintTop_toTopOf="@+id/tbFooter" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbContainer"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvToolbarTitle"
+        android:layout_width="193dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="188dp"
+        android:text="Inventory App"
+        android:textColor="#F1ECEC"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tbContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/tbContainer"
+        app:layout_constraintTop_toTopOf="@+id/tbContainer"
+        app:layout_constraintVertical_bias="0.484" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvInventory"
+        android:layout_width="406dp"
+        android:layout_height="592dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/tbFooter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbContainer"
+        app:layout_constraintVertical_bias="0.477" />
+</androidx.constraintlayout.widget.ConstraintLayout>
