@@ -14,7 +14,6 @@ import com.me.lordmathi2741.employee.singleton.Configuration
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-
 class InventoryActivity : AppCompatActivity() {
     private lateinit var productService: ProductService
     private var configuration = Configuration.getInstance()
@@ -27,7 +26,6 @@ class InventoryActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
         productService = configuration.setUpRetrofit()
         lifecycleScope.launch {
             configuration.getProducts(productService)
@@ -36,15 +34,22 @@ class InventoryActivity : AppCompatActivity() {
         lifecycleScope.launch {
             setUpInventoryRecyclerView()
         }
+
+
     }
 
 
     private suspend fun setUpInventoryRecyclerView(){
         val inventoryRecyclerView = findViewById<RecyclerView>(R.id.rvInventory)
-        inventoryRecyclerView.layoutManager = LinearLayoutManager(this)
+        val context = this
+        inventoryRecyclerView.layoutManager = LinearLayoutManager(context)
         withContext(Dispatchers.Main){
-            inventoryRecyclerView.adapter = ProductAdapter(configuration.getProducts(productService))
+            inventoryRecyclerView.adapter = ProductAdapter(context,configuration.getProducts(productService))
         }
 
     }
+
+
+
+
 }

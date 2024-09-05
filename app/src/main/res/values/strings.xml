@@ -42,4 +42,7 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="see_details">See Details</string>
+    <string name="copyright">Copyright º 2024 LordMathi2741. All Rights Reserved</string>
+    <string name="product_detail_image">Product detail image</string>
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cvInventory"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="150dp"
 
     app:cardBackgroundColor="#0A4E84"
     app:cardCornerRadius="20dp"
@@ -52,4 +52,18 @@
         android:textColor="#E6E3E3"
         android:textSize="12sp"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btSeeDetails"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#00BCD4"
+        android:minWidth="100dp"
+        android:padding="1dp"
+        android:text="@string/see_details"
+        android:textSize="10sp"
+        app:cornerRadius="5dp"
+        tools:ignore="SmallSp" />
 </androidx.cardview.widget.CardView>
